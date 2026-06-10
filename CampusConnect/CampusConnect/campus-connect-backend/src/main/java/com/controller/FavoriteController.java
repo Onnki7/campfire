@@ -1,8 +1,8 @@
 package com.controller;
 
-import com.campusconnect.security.UserPrincipal;
-import com.campusconnect.service.FavoriteService;
-import com.campusconnect.vo.Result;
+import com.security.UserPrincipal;
+import com.service.FavoriteService;
+import com.vo.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
