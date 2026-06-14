@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.campusconnect.mapper.TagMapper">
+
+    <select id="selectTagsByUserId" resultType="com.campusconnect.entity.Tag">
+        SELECT t.* FROM tag t
+        INNER JOIN user_tag ut ON t.id = ut.tag_id
+        WHERE ut.user_id = #{userId}
+    </select>
+
+    <select id="selectTagsByPostId" resultType="com.campusconnect.entity.Tag">
+        SELECT t.* FROM tag t
+        INNER JOIN post_tag pt ON t.id = pt.tag_id
+        WHERE pt.post_id = #{postId}
+    </select>
+
+</mapper>
